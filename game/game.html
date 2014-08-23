@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="../lib/easeljs-0.7.1.min.js"></script>
+		<script>
+			var player;
+			function init() 
+			{
+				var stage = new createjs.Stage("worlds");
+				player = new createjs.Shape();
+				player.graphics.beginFill("#ff0000").drawRect(0, 0, 100, 100);
+				player.x = 50;
+				player.y = 50;
+				stage.addChild(player);
+				stage.update();
+			}
+		</script>
+	</head>
+	<body onLoad="init();">
+		<canvas id="worlds" width="800" height="600">
+			alternate content
+		</canvas>
+	</body>
+</html>
