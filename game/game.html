@@ -4,6 +4,13 @@
 		<script src="./Player.js"></script>
 		<script src="./Tube.js"></script>
 		<script>
+			//constants
+			var PLANET_SIZE = 150;
+			var PLANET_OFFSET = 10;
+			var TUBE_OFFSET = 6;
+			var TUBE_W = 33;
+			var TUBE_H = 69;
+
 			//game classes
 			var player;			//player ship
 			var deadPlanet;
@@ -12,7 +19,9 @@
 
 			//sprites
 			var img_planet;
-			var ss_planets;
+			var img_tube;
+			var ss_planet;
+			var ss_tube;
 
 			//work classes
 			var canvas;
@@ -55,6 +64,7 @@
 
 				manifest = [
 					{src:"./img/planet.png", id:"planet"},
+					{src:"./img/tube.png", id:"tube"}
 				];
 
 				loader = new createjs.LoadQueue(false);
@@ -65,27 +75,53 @@
 			function handleComplete(event)
 			{
 				img_planet = loader.getResult("planet");
+				img_tube = loader.getResult("tube");
 
 				player = new Player();
 				player.x = 50;
 				player.y = 50;
 
-				ss_planets = new createjs.SpriteSheet({
+				ss_planet = new createjs.SpriteSheet({
 					images: [img_planet],
-					frames: { width: 50, height: 50 },
+					frames: { width: PLANET_SIZE, height: PLANET_SIZE },
 					animations: { alive: [0], dead: [1] }	//TODO add "change"
 				});
 
-				deadPlanet = new createjs.Sprite(ss_planets, "dead");
-				deadPlanet.x = 50;
-				deadPlanet.y = canvas.height/2;
+				ss_tube = new createjs.SpriteSheet({
+					images: [img_tube],
+					frames: { width: TUBE_W, height: TUBE_H },
+					animations: { begin: [0], end: [3], free: [1], busy: [2] }
+				});
 
-				targetPlanet = new createjs.Sprite(ss_planets, "alive");
-				targetPlanet.x = canvas.width - 50;
-				targetPlanet.y = canvas.height/2;
+				deadPlanet = new createjs.Sprite(ss_planet, "dead");
+				deadPlanet.x = PLANET_OFFSET;
+				deadPlanet.y = canvas.height/2 - PLANET_SIZE/2;
+
+				targetPlanet = new createjs.Sprite(ss_planet, "alive");
+				targetPlanet.x = canvas.width - (PLANET_SIZE + PLANET_OFFSET);
+				targetPlanet.y = canvas.height/2 - PLANET_SIZE/2;
+
+				array_tube = new Array(10);
+				array_tube[0] = new createjs.Sprite(ss_tube, "begin");
+				array_tube[0].x = PLANET_OFFSET + PLANET_SIZE - TUBE_OFFSET;
+				array_tube[0].y = canvas.height/2 - TUBE_H/2;
+				array_tube[14] = new createjs.Sprite(ss_tube, "end");
+				array_tube[14].x = canvas.width - (TUBE_W + PLANET_OFFSET + PLANET_SIZE - TUBE_OFFSET);
+				array_tube[14].y = canvas.height/2 - TUBE_H/2;
+
+				for(var i = 1; i < 14; ++i)
+				{
+					array_tube[i] = new createjs.Sprite(ss_tube, "free");
+					array_tube[i].x = PLANET_OFFSET + PLANET_SIZE - TUBE_OFFSET + TUBE_W*i;
+					array_tube[i].y = canvas.height/2 - TUBE_H/2;
+					stage.addChild(array_tube[i]);
+				}
 
 				stage.addChild(player);
 				stage.addChild(deadPlanet);
+				stage.addChild(targetPlanet);
+				stage.addChild(array_tube[0]);
+				stage.addChild(array_tube[14]);
 				stage.update();
 			}
 		</script>
