@@ -27,7 +27,8 @@
 // constructor:
 	p.Container_initialize = p.initialize;	//unique to avoid overiding base class
 
-	p.initialize = function () {
+	p.initialize = function ()
+	{
 		this.Container_initialize();
 
 		this.shipFlame = new createjs.Shape();
@@ -45,7 +46,8 @@
 	}
 
 // public methods:
-	p.makeShape = function () {
+	p.makeShape = function ()
+	{
 		//draw ship body
 		var g = this.shipBody.graphics;
 		g.clear();
@@ -81,7 +83,8 @@
 		this.hit = this.bounds;
 	}
 
-	p.tick = function (event) {
+	p.tick = function (event)
+	{
 		//move by velocity
 		this.x += this.vX;
 		this.y += this.vY;
@@ -108,10 +111,12 @@
 		}
 	}
 
-	p.accelerate = function () {
+	p.accelerate = function ()
+	{
 		//increase push ammount for acceleration
 		this.thrust += this.thrust + 0.6;
-		if (this.thrust >= Player.MAX_THRUST) {
+		if (this.thrust >= Player.MAX_THRUST)
+		{
 			this.thrust = Player.MAX_THRUST;
 		}
 
