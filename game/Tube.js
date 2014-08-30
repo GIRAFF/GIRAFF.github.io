@@ -1,17 +1,21 @@
 (function() {
 
-	var Button = function(label) {
+	var Tube = function(label) {
 		this.initialize(label);
 	}
-	var p = Button.prototype = new createjs.Container();
+	var p = Tube.prototype = new createjs.Container();
 
-	Button.prototype.Container_initialize = p.initialize;
+	Tube.MAX_HEALTH = 60;
 
-	Button.prototype.initialize = function(label) 
+	p.health;
+
+	Tube.prototype.Container_initialize = p.initialize;
+
+	Tube.prototype.initialize = function(label) 
 	{
 		this.Container_initialize();
 		
 	}
 
-window.Button = Button;
+window.Tube = Tube;
 }());
