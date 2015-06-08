@@ -1,25 +1,25 @@
+function main()
+{
+	
+}
+
 var ASSET_MANAGER = new AssetManager();
 
-//ASSET_MANAGER.queueDownload('./img/Kolobovere.png');
+ASSET_MANAGER.queueDownload('./img/background.jpg');
 //ASSET_MANAGER.queueDownload('img/names.png');
 
 ASSET_MANAGER.downloadAll(function()
 {
 	$("#overlay").fadeOut('slow');
+	main();
 });
 
-/*$(window).load(function()
+/*$("path").mouseenter(function()
 {
-	var page_h = $(this).height();
-	var page_w = $(this).width();
-	$("#svg_map").width(page_w);
-	$("#svg_map").height(page_h);
+	$(this).addClass("highlighted");
 });
 
-$(window).resize(function()
+$("path").mouseleave(function()
 {
-	var page_h = $(this).height();
-	var page_w = $(this).width();
-	$("#map").width(page_w);
-	$("#map").height(page_h);
+	$(this).removeClass("highlighted");
 });*/
