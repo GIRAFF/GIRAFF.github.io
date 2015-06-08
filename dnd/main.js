@@ -1,6 +1,6 @@
 var ASSET_MANAGER = new AssetManager();
 
-ASSET_MANAGER.queueDownload('./img/Kolobovere.png');
+//ASSET_MANAGER.queueDownload('./img/Kolobovere.png');
 //ASSET_MANAGER.queueDownload('img/names.png');
 
 ASSET_MANAGER.downloadAll(function()
