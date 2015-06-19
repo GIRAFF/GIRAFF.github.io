@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<HTML>
+<HTML LANG="ru">
 	<HEAD>
 		<META CONTENT="text/html;charset=utf-8" HTTP-EQUIV="Content-Type">
 		<META CONTENT="utf-8" HTTP-EQUIV="encoding">
@@ -92,22 +92,32 @@
 
 		#info_box {
 			z-index: 2002;
-			position: absolute;
 			display: none;
+			border-style: ridge;
+			border-width: 5px;
+			border-color: #ffa200;
+			background-color: #83340d;
+			padding: 5px 10px 5px 10px;
+			position: absolute;
 			top: 0px;
 			left: 0px;
-			background-color: #000;
-			padding: 5px 10px 5px 10px;
+			width: 15%;
 		}
 
 		#info_box > #head
 		{
-			color: #fff;
+			margin: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			color: #ffa200;
 		}
 
 		#info_box > #description
 		{
-			color: #fff;
+			display: inline;
+			font-size: 14px;
+			color: #ffa200;
 		}
 		</STYLE>
 		<SCRIPT SRC="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
@@ -116,9 +126,10 @@
 	</HEAD>
 	<BODY>
 		<DIV ID="info_box">
-			<P ID="head">ХУР</P>
-			<P ID="description">МА</P>
+			<P ID="head"></P>
+			<P ID="description"></P>
 		</DIV>
+		<!--TODO fix: из-под зомби торчит кусок карты-->
 		<DIV ID="overlay">
 			<IMG SRC="img/loading.gif">
 		</DIV>
