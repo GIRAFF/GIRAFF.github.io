@@ -10,22 +10,32 @@ ASSET_MANAGER.downloadAll(function()
 
 $(document).on('click', '[data-description]', function(e)
 {
-	$head = $(this).data("head");
-	$description = $(this).data("description");
+	var
+		$info_box = $("#info_box");
+		head = $(this).data("head"),
+		description = $(this).data("description"),
+		w = $(window).width(),
+		h = $(window).height();
 
-	$("#info_box > #head").text($head);
-	$("#info_box > #description").text($description);
-	$("#info_box").css("top", e.pageY + 5)
-				.css("left", e.pageX + 5)
-				.css("display", "inline");
+	$("#info_box > #head").text(head);
+	$("#info_box > #description").text(description);
+	
+	// выравнивание
+	if(e.pageX <= w/2)
+		$info_box
+			.css("left", e.pageX)
+			.css("right", "auto");
+	else
+		$info_box
+			.css("left", "auto")
+			.css("right", w - e.pageX);
+	if(e.pageY <= h/2)
+		$info_box
+			.css("top", e.pageY)
+			.css("bottom", "auto");
+	else
+		$info_box
+			.css("top", "auto")
+			.css("bottom", h - e.pageY);
+	$info_box.css("display", "inline");
 });
-
-/*$("path").mouseenter(function()
-{
-	$(this).addClass("highlighted");
-});
-
-$("path").mouseleave(function()
-{
-	$(this).removeClass("highlighted");
-});*/
