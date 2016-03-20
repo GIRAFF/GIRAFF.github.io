@@ -1,0 +1,12 @@
+---
+layout: post
+title: Сказ о Sailfish OS и Xperia SP
+date: '2015-08-29T10:52:00.000-07:00'
+author: Игорь Кислицын
+tags: 
+modified_time: '2015-08-29T10:52:54.755-07:00'
+blogger_id: tag:blogger.com,1999:blog-8919264251913798072.post-8458974343358000460
+blogger_orig_url: http://giraffov.blogspot.com/2015/08/sailfish-os-xperia-sp.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><i>Дисклеймер: Это статья про тестовую версию порта Sailfish OS для Xperia SP. Всё написанное действительно только на момент написания статьи и может устареть очень быстро.</i><br /><br />Впервые я наткнулся на упоминание Sailfish OS в статье на хабре. В ней говорилось о том, что один финский стартап, вдохновлённый MeeGo, занимается написанием операционной системы, основанной на linux, которая, по их словам, будет поддерживать android-приложения "из коробки" и спокойно устанавливаться поверх андроида. Через некоторое время они выпустили <a href="http://jolla.com/ru/jolla">первую железку</a> под управлением данной оси, <a href="http://jolla.com/tablet">потом вторую</a>. А портированием на чужое железо они делегировали сообществу, выпустив <a href="https://sailfishos.org/develop/hadk/">SDK</a> и мануал к нему.<br /><br />&lt;...&gt;<br /><br />Устанавливаем нужный образ <a href="https://wiki.merproject.org/wiki/Adaptations/libhybris/Install_SailfishOS_for_huashan">отсюда</a>.<br /><br />Troubleshooting:<br /><br /><ol style="text-align: left;"><li>Для обновления репозитория используем zypper ref.</li><li>Не монтирует карту памяти к компу? Проверь "/etc/usb-moded/mass-storage-jolla.ini" (и ведь, собака, до сих пор не монтирует).</li><li>Файл карты памяти может называться достаточно невнятно, вроде&nbsp;/dev/mmcblk1p1.</li><li>Очень чувствительный экран? Попробуй <a href="https://github.com/maikelwever/droid-hal-device/blob/hybris-12.1-huashan/device-sony-huashan-configs/usr/bin/droid/droid-fix-screen-sensitivity.sh">этот скрипт</a>.</li><li>Не выключается подсветка? Отруби <a href="https://github.com/maikelwever/droid-hal-device/blob/hybris-12.1-huashan/device-sony-huashan-configs/usr/bin/droid/droid-backlight-disable-second.sh">скриптом</a>.</li></ol></div>

@@ -1,12 +1,28 @@
-<html>
-	<head>
-		<title>Yngvarr the programmer!</title>
-		<link href="./css/main.css" rel="stylesheet" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Press+Start+2P&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<div id="hat">
-			<h1>Yngvarr the programmer!<h1>
-		</div>
-	</body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Заметки</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+		{{ post.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
+		<!--{% if post.content | size > 300 %}
+		    <strong>...</strong>
+		{% endif %}-->
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- TODO заменить на иконку -->
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
