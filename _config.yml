@@ -23,3 +23,6 @@ encoding: UTF-8
 relative_permalinks: false
 permalink: /posts/:title
 future: false
+
+paginate: 5
+paginate_path: "page:num"
