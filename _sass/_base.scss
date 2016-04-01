@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
     color: $brand-color;
-    text-decoration: none;
+	text-decoration: none;
 
     &:visited {
         color: darken($brand-color, 15%);
@@ -113,9 +113,13 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    font-size: $quote-font-size;
     letter-spacing: -1px;
     font-style: italic;
+
+	a {
+		color: $text-color;
+	}
 
     > :last-child {
         margin-bottom: 0;
@@ -129,7 +133,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: $code-font-size;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -156,12 +160,12 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+	max-width: -webkit-calc(#{$wrapper-width} - (#{$spacing-unit} * 2));
+	max-width:         calc(#{$wrapper-width} - (#{$spacing-unit} * 2));
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $spacing-unit;
+	padding-left: $spacing-unit;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -171,8 +175,6 @@ pre {
         padding-left: $spacing-unit / 2;
     }
 }
-
-
 
 /**
  * Clearfix

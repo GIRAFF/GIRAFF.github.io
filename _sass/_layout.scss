@@ -162,7 +162,32 @@
     }
 }
 
+/**
+ * Columns
+ */
+.col-main {
+	float: left;
+	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+	max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+}
 
+.col-side {
+	float: right;
+	max-width: -webkit-calc(#{$side-width} - (#{$spacing-unit} * 2));
+	max-width:         calc(#{$side-width} - (#{$spacing-unit} * 2));
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $spacing-unit;
+	padding-left: $spacing-unit;
+
+    @include media-query($on-laptop) {
+		display: none;
+        /*max-width: -webkit-calc(#{$side-width} - (#{$spacing-unit}));*/
+        /*max-width:         calc(#{$side-width} - (#{$spacing-unit}));*/
+        /*padding-right: $spacing-unit / 2;*/
+        /*padding-left: $spacing-unit / 2;*/
+    }
+}
 
 /**
  * Page content

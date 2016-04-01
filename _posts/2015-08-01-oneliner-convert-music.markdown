@@ -10,12 +10,11 @@ tags:
 - flac
 ---
 
-One-liner дня:
+One-liner дня конвертирует все ape-файлы из текущей директории во FLAC при помощи ffmpeg.
+<!-- more -->
 
 {% highlight bash %}
 find -type f -name "*.ape" -print0 -exec ffmpeg {}.flac -i {} \; && rename "s/.ape.flac/.flac/g" *
 {% endhighlight %}
-
-Конвертирует все ape-файлы из текущей директории во FLAC при помощи ffmpeg.
 
 Спасибо [этому парню](http://tt.erinome.net/2013/03/468) за статью про перебор файлов.
