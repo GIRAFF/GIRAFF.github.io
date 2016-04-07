@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>The Dwarf</title>
-  <meta name="description" content="Потому что быть дварфом - офигительно!
-">
+  <title>Печать брошюр</title>
+  <meta name="description" content="Сегодняшняя команда дня переводит файл book.ps в удобную для печати брошюр форму.">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://the-dwarf.ru/">
+  <link rel="canonical" href="http://the-dwarf.ru/posts/oneliner-print">
   <link rel="alternate" type="application/rss+xml" title="The Dwarf" href="http://the-dwarf.ru/feed.xml">
 </head>
 
@@ -60,56 +59,32 @@
     <div class="page-content">
       <div class="wrapper">
 		<div class="col-main">
-			<div class="home">
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Заметки</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Печать брошюр</h1>
+    <p class="post-meta"><time datetime="2016-03-24T00:00:00+06:00" itemprop="datePublished">Mar 24, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 1, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>Сегодняшняя команда дня переводит файл book.ps в удобную для печати брошюр форму.
+<!-- more --></p>
 
-        <h3>
-          <a class="post-link" href="/posts/links-1">Закладки: март 2016</a>
-        </h3>
-		Так как в закладках интересные ссылки имеют свойство теряться навсегда, да и достаточно проблематично синхронизировать их между устройствами, почему бы не хранить ссылки там же, где и интересные идеи с реюзабельными решениями – в блоге? 
-		<!--
-		    <strong>...</strong>
-		-->
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 24, 2016</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">psbook book.ps | psnup -l -2 &gt; result.ps</code></pre></figure>
 
-        <h3>
-          <a class="post-link" href="/posts/oneliner-print">Печать брошюр</a>
-        </h3>
-		Сегодняшняя команда дня переводит файл book.ps в удобную для печати брошюр форму.
+<p>Теперь файл result.ps можно спокойно распечатать в таком порядке:</p>
 
-		<!--
-		    <strong>...</strong>
-		-->
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 1, 2015</span>
+<ul>
+  <li>Печатать чётные;</li>
+  <li>Сложить листы в обратном порядке;</li>
+  <li>Печатать нечётные;</li>
+  <li>???????</li>
+  <li>PROFIT!!!!!</li>
+</ul>
 
-        <h3>
-          <a class="post-link" href="/posts/oneliner-convert-music">Массовое конвертирование *.ape в *.flac</a>
-        </h3>
-		One-liner дня конвертирует все ape-файлы из текущей директории во FLAC при помощи ffmpeg.
+  </div>
 
-		<!--
-		    <strong>...</strong>
-		-->
-      </li>
-    
-  </ul>
-
-  <!-- TODO заменить на иконку -->
-  <p class="rss-subscribe">Подпишись <a href="/feed.xml">на RSS</a></p>
-
-</div>
+</article>
 
 		</div>
 		<div class="col-side">
