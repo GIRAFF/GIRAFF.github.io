@@ -6,9 +6,42 @@
 </description>
     <link>http://the-dwarf.ru/</link>
     <atom:link href="http://the-dwarf.ru/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Apr 2016 20:09:55 +0600</pubDate>
-    <lastBuildDate>Fri, 15 Apr 2016 20:09:55 +0600</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2016 20:43:55 +0600</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2016 20:43:55 +0600</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Макроподстановки для FORTRAN 77</title>
+        <description>&lt;p&gt;Первое правило продуктивного программиста: оптимизируй написание кода. Чем мучаться с недостатками инструмента, дополни инструмент под свои нужды и наслаждайся! Сегодня захотелось оптимизировать фортран, добавив в него примитивный си-подобный препроцессор, который (пока?) может только в макроподстановки.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Получилось так (с примером компиляции программы):&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;all:
+	./prep.sh main.for | gfortran -std=legacy -o a.out -xf77 -&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/GIRAFF/5364e50489acff909a1baf2154114ae4.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Теперь вы можете объявлять константы в фортране так же просто, как и на си.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-fortran&quot; data-lang=&quot;fortran&quot;&gt;%define NAME value
+...
+var=$NAME&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Работает скрипт довольно просто: вытаскиваем из файла все строки с макросами &lt;em&gt;(строка 13)&lt;/em&gt;, приводим их к виду ‘имя/значение’ &lt;em&gt;(14)&lt;/em&gt;, вставляем в команды для &lt;code class=&quot;highlighter-rouge&quot;&gt;sed&lt;/code&gt; &lt;em&gt;(15)&lt;/em&gt;. В переменной macro теперь хранятся команды для замены каждого макроса на значение. В строке 16 все этим командам на вход подаётся файл исходного кода и из результата удаляются все строки с &lt;code class=&quot;highlighter-rouge&quot;&gt;%define&lt;/code&gt;. Строка 17 исполняет полученный конвейер.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Apr 2016 00:00:00 +0600</pubDate>
+        <link>http://the-dwarf.ru/posts/fortran-macros</link>
+        <guid isPermaLink="true">http://the-dwarf.ru/posts/fortran-macros</guid>
+        
+        
+        <category>bash</category>
+        
+        <category>fortran</category>
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Закладки: март 2016</title>
