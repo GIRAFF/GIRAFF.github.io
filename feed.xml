@@ -6,9 +6,45 @@
 </description>
     <link>http://the-dwarf.ru/</link>
     <atom:link href="http://the-dwarf.ru/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 May 2016 01:22:58 +0600</pubDate>
-    <lastBuildDate>Sun, 01 May 2016 01:22:58 +0600</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 16:35:32 +0600</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 16:35:32 +0600</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Закладки: апрель 2016</title>
+        <description>&lt;p&gt;В этом месяце популярны блоги о настольных ролевых играх, IRC-чаты и NES.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;Околокомпьютерное&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nesdoug.com/&quot;&gt;Блог&lt;/a&gt; о разработке приложений для NES (famicom, dendy).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;Тут&lt;/a&gt; люди делятся шейдерами.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.iquilezles.org/www/index.htm&quot;&gt;Индекс статей&lt;/a&gt; от Inigo Quilez о компьютерной графике.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://oss-it.ru/129&quot;&gt;Инструкция&lt;/a&gt; по настройке раздачи сети с ноутбука под управлением Linux.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://quadpoint.org/articles/irssisplit/&quot;&gt;Гайд&lt;/a&gt; по разбиению экрана &lt;code class=&quot;highlighter-rouge&quot;&gt;irssi&lt;/code&gt; на окна.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/lifeforms/irssi-smartfilter&quot;&gt;Фильтр&lt;/a&gt; сообщений о входе/выходе с канала  для &lt;code class=&quot;highlighter-rouge&quot;&gt;irssi&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.draw.io/&quot;&gt;draw.io&lt;/a&gt; – инструмент для рисования разнообразных схем онлайн.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;НРИ&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mynoise.net/&quot;&gt;Генератор шумов&lt;/a&gt; для поддержания необходимой атмосферы за игровым столом.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://xhuul.blogspot.ru/2015/07/kruthik-5e-monster-conversion.html&quot;&gt;Адаптация Крутиков&lt;/a&gt; под D&amp;amp;D5. В этом блоге также можно найти много других адаптаций существ под 5e и логи игр по Pathfinder.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rpgcharacters.wordpress.com/&quot;&gt;Dyson’s Dodecahedron&lt;/a&gt; – блог, в котором регулярно появляются новые карты местности.&lt;/li&gt;
+  &lt;li&gt;Веб-комикс &lt;a href=&quot;http://www.giantitp.com/comics/oots0001.html&quot;&gt;Орден Палки&lt;/a&gt;, повествующий о типичном ДнДшном пати в типичном ДнДшном подземелье.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 02 May 2016 00:00:00 +0600</pubDate>
+        <link>http://the-dwarf.ru/posts/links-2</link>
+        <guid isPermaLink="true">http://the-dwarf.ru/posts/links-2</guid>
+        
+        <category>закладки</category>
+        
+        
+      </item>
     
       <item>
         <title>Макроподстановки для FORTRAN 77</title>
