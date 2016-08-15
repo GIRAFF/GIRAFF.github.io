@@ -81,7 +81,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Макроподстановки для FORTRAN 77</h1>
-	<p class="post-meta"><time datetime="2016-04-22T00:00:00+06:00" itemprop="datePublished">22 апреля 2016</time>, <span class="tags"><a class='category' href='/tags/bash/'>bash</a>, <a class='category' href='/tags/fortran/'>fortran</a>, <a class='category' href='/tags/linux/'>linux</a></span></p>
+	<p class="post-meta"><time datetime="2016-04-22T00:00:00+06:00" itemprop="datePublished">22 апреля 2016</time>, <span class="tags">bashfortranlinux</span></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -97,9 +97,9 @@
 
 <p>Теперь вы можете объявлять константы в фортране так же просто, как и на си.</p>
 
-<figure class="highlight"><pre><code class="language-fortran" data-lang="fortran">%define NAME value
-...
-var=$NAME</code></pre></figure>
+<figure class="highlight"><pre><code class="language-fortran" data-lang="fortran"><span class="o">%</span><span class="n">define</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="n">value</span><span class="w">
+</span><span class="err">...</span><span class="w">
+</span><span class="n">var</span><span class="o">=</span><span class="err">$</span><span class="n">NAME</span></code></pre></figure>
 
 <p>Работает скрипт довольно просто: вытаскиваем из файла все строки с макросами <em>(строка 13)</em>, приводим их к виду ‘имя/значение’ <em>(14)</em>, вставляем в команды для <code class="highlighter-rouge">sed</code> <em>(15)</em>. В переменной macro теперь хранятся команды для замены каждого макроса на значение. В строке 16 все этим командам на вход подаётся файл исходного кода и из результата удаляются все строки с <code class="highlighter-rouge">%define</code>. Строка 17 исполняет полученный конвейер.</p>
 
