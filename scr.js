@@ -1,0 +1,4 @@
+function shuffle()
+{
+	alert("Shuffle!");
+}
